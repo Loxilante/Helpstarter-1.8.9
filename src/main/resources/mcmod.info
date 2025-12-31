@@ -1,0 +1,16 @@
+[
+{
+  "modid": "helpstarter",
+  "name": "Helpstarter",
+  "description": "Client-side /hs command.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Loxilante"],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
