@@ -19,7 +19,11 @@ build
 gradle.properties
 
 # license
-LICENSE-fml.txt
+/LICENSE-fml.txt
+/MinecraftForge-Credits.txt
+/MinecraftForge-License.txt
+/Paulscode IBXM Library License.txt
+/Paulscode SoundSystem CodecIBXM License.txt
 
 # other
 eclipse

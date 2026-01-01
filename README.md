@@ -1,15 +1,29 @@
 
 # HelpStarter
 
-Version: 0.1.0
+Version: 0.2.0
 
 **[Changelog](./CHANGELOG.md)**
 
 ---
 
-HelpStarter is a client-side mod for **Minecraft Forge 1.8.9**. It allows you to quickly fetch a list of available bots in-game via a command, and automatically invite a specified number of bots to your party.
+HelpStarter is a client-side mod for **Minecraft Forge 1.8.9** that improves your helpstart experience on Hypixel.
 
-The mod retrieves the bot list from a remote API and then runs the `/p <bot1> <bot2> ...` command in-game, making it easy to form a party quickly.
+---
+
+## Features
+
+- `/hs 1|2|3`  
+  Fetch available bots for the current player and invite 1-3 bots.
+
+- `/hs a|available [optional:username]`  
+  Show available bots for a specified username (defaults to your own username).
+
+- `/hs q|query [optional:username]`  
+  Query all bots and print them grouped as **Available / Busy / Unavailable**.
+
+- `/hs help`  
+  Show usage help in chat.
 
 
 
