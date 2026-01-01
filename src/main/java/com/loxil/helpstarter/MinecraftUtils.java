@@ -17,6 +17,20 @@ public final class MinecraftUtils {
         return Minecraft.getMinecraft().getSession().getUsername();
     }
 
+    /**
+     * Validates if a string is a valid Minecraft username.
+     * Minecraft usernames must be 3-16 characters long and contain only letters, numbers, and underscores.
+     *
+     * @param username
+     * @return true if valid, false otherwise
+     */
+    public static boolean isValidUsername(String username) {
+        if (username == null) {
+            return false;
+        }
+        return username.matches("^[a-zA-Z0-9_]{3,16}$");
+    }
+
     public static List<String> getOnlinePlayerNames() {
         List<String> playerNames = new ArrayList<String>();
         if (Minecraft.getMinecraft().thePlayer != null && Minecraft.getMinecraft().thePlayer.sendQueue != null) {

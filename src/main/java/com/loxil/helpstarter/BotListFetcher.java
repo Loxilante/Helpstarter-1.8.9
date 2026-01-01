@@ -14,6 +14,7 @@ import java.util.List;
 
 public class BotListFetcher {
 
+    // TODO: Set the API base URL here
     private static final String API_BASE_URL = "https://real-api.com";
 
     /**
@@ -32,7 +33,7 @@ public class BotListFetcher {
         connection.setRequestMethod("GET");
         connection.setConnectTimeout(5000);
         connection.setReadTimeout(5000);
-        connection.setRequestProperty("User-Agent", "HelpStarter/0.2.0");
+        connection.setRequestProperty("User-Agent", "HelpStarter/0.2.1");
 
         int responseCode = connection.getResponseCode();
         if (responseCode != HttpURLConnection.HTTP_OK) {
@@ -103,7 +104,7 @@ public class BotListFetcher {
         connection.setRequestMethod("GET");
         connection.setConnectTimeout(5000);
         connection.setReadTimeout(5000);
-        connection.setRequestProperty("User-Agent", "HelpStarter/0.2.0");
+        connection.setRequestProperty("User-Agent", "HelpStarter/0.2.1");
 
         int responseCode = connection.getResponseCode();
         if (responseCode != HttpURLConnection.HTTP_OK) {
@@ -178,7 +179,7 @@ public class BotListFetcher {
         connection.setRequestMethod("GET");
         connection.setConnectTimeout(5000);
         connection.setReadTimeout(5000);
-        connection.setRequestProperty("User-Agent", "HelpStarter/0.2.0");
+        connection.setRequestProperty("User-Agent", "HelpStarter/0.2.1");
 
         int responseCode = connection.getResponseCode();
         if (responseCode != HttpURLConnection.HTTP_OK) {

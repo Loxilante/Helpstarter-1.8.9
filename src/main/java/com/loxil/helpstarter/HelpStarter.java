@@ -9,7 +9,7 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 public class HelpStarter
 {
     public static final String MODID = "helpstarter";
-    public static final String VERSION = "0.2.0";
+    public static final String VERSION = "0.2.1";
     
     @EventHandler
     public void init(FMLInitializationEvent event)

@@ -41,15 +41,22 @@ public class HsCommand extends CommandBase {
         if (arg.equals("help")) {
             MinecraftUtils.addChatMessageOnMainThread("§6=== HelpStarter Commands ===");
             MinecraftUtils.addChatMessageOnMainThread("§e/hs <1|2|3> §7- Invite 1, 2, or 3 bots to your party");
-            MinecraftUtils.addChatMessageOnMainThread("§e/hs a [username] §7or §e/hs available [username] §7- Show available bots");
-            MinecraftUtils.addChatMessageOnMainThread("§e/hs q [username] §7or §e/hs query [username] §7- Show all bots");
+            MinecraftUtils.addChatMessageOnMainThread("§e/hs a|available [optional:username] §7- Show available bots");
+            MinecraftUtils.addChatMessageOnMainThread("§e/hs q|query [optional:username] §7- Show all bots");
             MinecraftUtils.addChatMessageOnMainThread("§e/hs help §7- Show this help message");
+            MinecraftUtils.addChatMessageOnMainThread("§bDiscord: §floxilante");
             return;
         }
 
         // Handle 'a' or 'available' command - show available bots
         if (arg.equals("a") || arg.equals("available")) {
             final String username = args.length >= 2 ? args[1] : MinecraftUtils.getUsername();
+
+            if (!MinecraftUtils.isValidUsername(username)) {
+                MinecraftUtils.addChatMessageOnMainThread("§4Error: Invalid username.");
+                return;
+            }
+            
             MinecraftUtils.addChatMessageOnMainThread("§eFetching available bots for " + username + "...");
 
             new Thread(new Runnable() {
@@ -63,9 +70,9 @@ public class HsCommand extends CommandBase {
                             return;
                         }
 
-                        StringBuilder bots = new StringBuilder("§aCurrently available bots for " + username + ":");
+                        StringBuilder bots = new StringBuilder("§a");
                         for (int i = 0; i < list.size(); i++) {
-                            bots.append(" ").append(list.get(i));
+                            bots.append(list.get(i)).append(' ');
                         }
                         MinecraftUtils.addChatMessageOnMainThread(bots.toString());
 
@@ -81,6 +88,12 @@ public class HsCommand extends CommandBase {
         // Handle 'q' or 'query' command - show all bots classified by availability
         if (arg.equals("q") || arg.equals("query")) {
             final String username = args.length >= 2 ? args[1] : MinecraftUtils.getUsername();
+
+            if (!MinecraftUtils.isValidUsername(username)) {
+                MinecraftUtils.addChatMessageOnMainThread("§4Error: Invalid username.");
+                return;
+            }
+            
             MinecraftUtils.addChatMessageOnMainThread("§eQuerying bot status for " + username + "...");
 
             new Thread(new Runnable() {

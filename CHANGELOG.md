@@ -1,6 +1,11 @@
 
 # Changelog
 
+## [v0.2.1] - 2026-01-01
+
+### Added
+- Username validation for `a|available` and `q|query` commands.
+
 ## [v0.2.0] - 2026-01-01
 
 ### Added
